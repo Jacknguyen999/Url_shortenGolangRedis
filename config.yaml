@@ -5,7 +5,7 @@ database:
   host: "db"
   port: "5432"
   user: "postgres"
-  password: "postgres"
+#  password: "postgres"
   dbname: "urlshortener"
 
 redis:
@@ -13,6 +13,6 @@ redis:
   port: "6379"
   password: ""
   db: 0
-
-jwt:
-  secret: "hasdjahsjdashdi13uye9u1hejshdkjashdkjashdaskdhajks"
+#
+#jwt:
+#  secret: "hasdjahsjdashdi13uye9u1hejshdkjashdkjashdaskdhajks"

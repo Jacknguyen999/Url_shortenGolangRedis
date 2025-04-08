@@ -37,11 +37,18 @@ type JWTConfig struct {
 }
 
 func LoadConfig() (*Config, error) {
-	viper.SetConfigName("config")
+	viper.SetConfigName(".config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath(".")
 
 	viper.AddConfigPath("./config")
+
+	//Enable env
+	viper.AutomaticEnv()
+
+	// Map env variable to config above
+	viper.BindEnv("database.password", "DB_PASSWORD")
+	viper.BindEnv("jwt.secret", "JWT_SECRET")
 
 	err := viper.ReadInConfig()
 	if err != nil {
