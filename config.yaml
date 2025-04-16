@@ -1,0 +1,23 @@
+server:
+  port: ":8080"
+
+database:
+  host: "db"
+  port: "5432"
+  user: "postgres"
+  dbname: "urlshortener"
+
+redis:
+  host: "redis"
+  port: "6379"
+  password: ""
+  db: 0
+
+jwt:
+  secret: ${JWT_SECRET}
+  token_expire_time: "24h"
+
+oauth:
+  googleClientID: ${GOOGLE_CLIENT_ID}
+  googleClientSecret: ${GOOGLE_CLIENT_SECRET}
+  redirectURL: ${OAUTH_REDIRECT_URL}
